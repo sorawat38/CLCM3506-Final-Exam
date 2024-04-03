@@ -1,4 +1,4 @@
-import HomePage from "./pages/HomePage.tsx";
+import Dashboard from "./pages/Dashboard.tsx";
 import MedicalRecord from "./pages/MedicalRecord.tsx";
 import {
   createBrowserRouter,
@@ -11,7 +11,7 @@ import RootLayout from "./layouts/RootLayout.tsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
-      <Route index element={<HomePage />} />,
+      <Route index element={<Dashboard />} />,
       <Route path="medical-record" element={<MedicalRecord />} />,
     </Route>,
   ),
