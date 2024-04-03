@@ -55,6 +55,32 @@ function UpcomingAppointments() {
   );
 }
 
+function NextMeetings() {
+  return (
+    <Card>
+      <CardHeader>
+        <Heading size={"lg"} color={"teal.500"}>
+          Next meetings
+        </Heading>
+      </CardHeader>
+      <CardBody></CardBody>
+    </Card>
+  );
+}
+
+function LabAndTestResult() {
+  return (
+    <Card>
+      <CardHeader>
+        <Heading size={"lg"} color={"teal.500"}>
+          Lab and Test Result
+        </Heading>
+      </CardHeader>
+      <CardBody></CardBody>
+    </Card>
+  );
+}
+
 function Dashboard() {
   return (
     <Grid
@@ -66,24 +92,10 @@ function Dashboard() {
         <UpcomingAppointments />
       </GridItem>
       <GridItem colSpan={1}>
-        <Card>
-          <CardHeader>
-            <Heading size={"lg"} color={"teal.500"}>
-              Next meetings
-            </Heading>
-          </CardHeader>
-          <CardBody></CardBody>
-        </Card>
+        <NextMeetings />
       </GridItem>
       <GridItem colSpan={1}>
-        <Card>
-          <CardHeader>
-            <Heading size={"lg"} color={"teal.500"}>
-              Lab and Test Result
-            </Heading>
-          </CardHeader>
-          <CardBody></CardBody>
-        </Card>
+        <LabAndTestResult />
       </GridItem>
     </Grid>
   );
