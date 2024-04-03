@@ -11,7 +11,7 @@ import {
 function Header() {
   return (
     <Flex as={"nav"} alignItems={"center"}>
-      <Heading as={"h1"}>Hello, Sorawat</Heading>
+      <Heading as={"h1"}>Good morning, Dr. Benjamin</Heading>
       <Spacer />
       <HStack spacing={"20px"}>
         <Box bg={"gray.200"} p={"10px"}>
