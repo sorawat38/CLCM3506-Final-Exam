@@ -16,8 +16,13 @@ function Dashboard() {
     >
       <GridItem colSpan={2}>
         <Card>
-          <CardHeader>
-            <Heading size={"lg"}>Upcoming appointments</Heading>
+          <CardHeader
+            borderTopRadius={"lg"}
+            bgGradient={"linear(to-r, teal.400, teal.200)"}
+          >
+            <Heading size={"lg"} color={"white"}>
+              Upcoming appointments
+            </Heading>
           </CardHeader>
           <CardBody></CardBody>
         </Card>
@@ -25,7 +30,9 @@ function Dashboard() {
       <GridItem colSpan={1}>
         <Card>
           <CardHeader>
-            <Heading size={"lg"}>Next meetings</Heading>
+            <Heading size={"lg"} color={"teal.500"}>
+              Next meetings
+            </Heading>
           </CardHeader>
           <CardBody></CardBody>
         </Card>
@@ -33,7 +40,9 @@ function Dashboard() {
       <GridItem colSpan={1}>
         <Card>
           <CardHeader>
-            <Heading size={"lg"}>Lab and Test Result</Heading>
+            <Heading size={"lg"} color={"teal.500"}>
+              Lab and Test Result
+            </Heading>
           </CardHeader>
           <CardBody></CardBody>
         </Card>
