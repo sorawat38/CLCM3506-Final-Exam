@@ -1,12 +1,4 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Heading,
-  HStack,
-  Spacer,
-  Text,
-} from "@chakra-ui/react";
+import { Button, Flex, Heading, HStack, Spacer, Text } from "@chakra-ui/react";
 
 function Header() {
   return (
@@ -14,10 +6,7 @@ function Header() {
       <Heading as={"h1"}>Good morning, Dr. Benjamin</Heading>
       <Spacer />
       <HStack spacing={"20px"}>
-        <Box bg={"gray.200"} p={"10px"}>
-          M
-        </Box>
-        <Text>test@test.com</Text>
+        <Text>drbenjaminpatel@example.com</Text>
         <Button colorScheme={"yellow"}>Logout</Button>
       </HStack>
     </Flex>

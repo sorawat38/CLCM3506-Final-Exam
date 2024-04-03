@@ -46,7 +46,7 @@ function Sidebar() {
           </NavLink>
         </ListItem>
       </List>
-      <Avatar size={"md"} name={"S"} />
+      <Avatar size={"md"} name={"B"} />
     </Flex>
   );
 }
