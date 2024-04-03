@@ -1,5 +1,6 @@
-import { Avatar, Flex, List, ListItem, Text } from "@chakra-ui/react";
+import { Avatar, Flex, List, ListIcon, ListItem, Text } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
+import { CalendarIcon, InfoIcon } from "@chakra-ui/icons";
 
 function Sidebar() {
   const handleMouseOver = (e: {
@@ -30,6 +31,7 @@ function Sidebar() {
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}
           >
+            <ListIcon as={CalendarIcon} color={"white"} />
             Dashboard
           </NavLink>
         </ListItem>
@@ -39,6 +41,7 @@ function Sidebar() {
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}
           >
+            <ListIcon as={InfoIcon} color={"white"} />
             Medical Record
           </NavLink>
         </ListItem>
