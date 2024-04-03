@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "../components/Navbar.tsx";
+import Header from "../components/Header.tsx";
 import { Grid, GridItem } from "@chakra-ui/react";
 import Sidebar from "../components/Sidebar.tsx";
 
@@ -22,7 +22,7 @@ function RootLayout() {
         <Sidebar />
       </GridItem>
       <GridItem p={"40px"} pt={"100px"} area={"header"}>
-        <Navbar />
+        <Header />
       </GridItem>
       <GridItem p={"40px"} area={"main"}>
         <Outlet />

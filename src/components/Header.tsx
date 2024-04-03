@@ -8,7 +8,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 
-function Navbar() {
+function Header() {
   return (
     <Flex as={"nav"} alignItems={"center"}>
       <Heading as={"h1"}>Hello, Sorawat</Heading>
@@ -24,4 +24,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Header;
