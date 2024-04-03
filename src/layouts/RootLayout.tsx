@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar.tsx";
-import { Flex, Grid, GridItem } from "@chakra-ui/react";
+import { Grid, GridItem } from "@chakra-ui/react";
+import Sidebar from "../components/Sidebar.tsx";
 
 function RootLayout() {
   return (
@@ -12,10 +13,13 @@ function RootLayout() {
       gridTemplateRows={"auto 1fr"}
       gridTemplateColumns={{ base: "1fr", md: "1fr 5fr" }}
     >
-      <GridItem bg={"teal.300"} minHeight={{ md: "100vh" }} area={"nav"}>
-        <Flex justifyContent="center" pt={"50px"}>
-          <span>sidebar</span>
-        </Flex>
+      <GridItem
+        bg={"teal.300"}
+        minHeight={{ md: "100vh" }}
+        p={"50px"}
+        area={"nav"}
+      >
+        <Sidebar />
       </GridItem>
       <GridItem p={"40px"} area={"header"}>
         <Navbar />
