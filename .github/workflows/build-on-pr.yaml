@@ -1,7 +1,6 @@
 name: Build on PR to main
 
 on:
-  push:
   pull_request:
     branches:
       - main
