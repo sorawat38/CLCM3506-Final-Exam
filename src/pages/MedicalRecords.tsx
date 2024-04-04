@@ -8,8 +8,11 @@ import {
   Thead,
   Tr,
   IconButton,
+  Spacer,
+  Button,
+  Flex,
 } from "@chakra-ui/react";
-import { EditIcon, ViewIcon, DeleteIcon } from "@chakra-ui/icons";
+import { EditIcon, ViewIcon, DeleteIcon, AddIcon } from "@chakra-ui/icons";
 import { Fragment } from "react";
 
 type MedicalRecord = {
@@ -36,7 +39,18 @@ function MedicalRecords() {
   };
   return (
     <Fragment>
-      <Heading as={"h3"}>Medical Records</Heading>
+      <Flex alignItems="center">
+        <Heading as={"h3"}>Medical Records</Heading>
+        <Spacer />
+        <Button
+          leftIcon={<AddIcon />}
+          colorScheme="teal"
+          size={"lg"}
+          onClick={() => console.log("Create new record")}
+        >
+          Create
+        </Button>
+      </Flex>
       <TableContainer mt={10}>
         <Table>
           <Thead>
