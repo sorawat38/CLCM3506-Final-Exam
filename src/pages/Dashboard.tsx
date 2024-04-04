@@ -1,4 +1,6 @@
 import {
+  Avatar,
+  Box,
   Button,
   Card,
   CardBody,
@@ -7,12 +9,15 @@ import {
   Grid,
   GridItem,
   Heading,
+  HStack,
   Image,
+  Stack,
+  Text,
 } from "@chakra-ui/react";
 
 function UpcomingAppointments() {
   return (
-    <Card overflow="hidden">
+    <Card>
       <CardHeader
         borderTopRadius={"lg"}
         bgGradient={"linear(to-r, teal.400, teal.200)"}
@@ -56,15 +61,48 @@ function UpcomingAppointments() {
 }
 
 function NextMeetings() {
+  const meetings = [
+    {
+      name: "Dr. Stephen Strange",
+      role: "Neurosurgeon",
+      img: "src/assets/stephen_strange.png",
+    },
+    {
+      name: "Dr. Emily Carter",
+      role: "Cardiologist",
+      img: "src/assets/emily_carter.png",
+    },
+    {
+      name: "Dr. Daniel Nguyen",
+      role: "Pediatrician",
+      img: "src/assets/daniel_nguyen.png",
+    },
+  ];
   return (
-    <Card>
-      <CardHeader>
-        <Heading size={"lg"} color={"teal.500"}>
-          Next meetings
-        </Heading>
-      </CardHeader>
-      <CardBody></CardBody>
-    </Card>
+    <Box>
+      <Heading size={"lg"} color={"teal.500"}>
+        Next meetings
+      </Heading>
+      <Stack spacing={5} m={"10px"}>
+        {meetings.map((meeting, index) => (
+          <Card key={index}>
+            <CardBody>
+              <HStack spacing={10}>
+                <Avatar
+                  size={"xl"}
+                  name={meeting.name.replace("Dr. ", "")}
+                  src={meeting.img}
+                />
+                <Box>
+                  <Heading as={"h3"}>{meeting.name}</Heading>
+                  <Text as={"h4"}>{meeting.role}</Text>
+                </Box>
+              </HStack>
+            </CardBody>
+          </Card>
+        ))}
+      </Stack>
+    </Box>
   );
 }
 
@@ -83,11 +121,7 @@ function LabAndTestResult() {
 
 function Dashboard() {
   return (
-    <Grid
-      templateRows={"repeat(2, 1fr)"}
-      templateColumns={"repeat(2, 1fr)"}
-      gap={10}
-    >
+    <Grid templateRows={"auto 1fr"} templateColumns={"repeat(2, 1fr)"} gap={5}>
       <GridItem colSpan={2}>
         <UpcomingAppointments />
       </GridItem>
