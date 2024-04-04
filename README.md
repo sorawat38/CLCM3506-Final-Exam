@@ -18,7 +18,7 @@ This project is a medical dashboard built with React and TypeScript. It provides
 ## Project Structure
 
 - `src/pages/Dashboard.tsx`: This is the main dashboard page. It contains components for upcoming appointments, next meetings, and lab and test results.
-- `src/pages/MedicalRecord.tsx`: This page is for displaying medical records.
+- `src/pages/MedicalRecords.tsx`: This page is for displaying medical records.
 - `src/App.tsx`: This is the main entry point of the application. It sets up the routing for the application.
 
 ## Getting Started
