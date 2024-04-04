@@ -1,5 +1,5 @@
 import Dashboard from "./pages/Dashboard.tsx";
-import MedicalRecord from "./pages/MedicalRecord.tsx";
+import MedicalRecords from "./pages/MedicalRecords.tsx";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -13,7 +13,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Dashboard />} />,
-      <Route path="medical-record" element={<MedicalRecord />} />,
+      <Route path="medical-records" element={<MedicalRecords />} />,
       <Route path="profile" element={<Profile />} />,
     </Route>,
   ),

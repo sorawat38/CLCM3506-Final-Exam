@@ -1,7 +1,6 @@
 import {
   Heading,
   Table,
-  TableCaption,
   TableContainer,
   Tbody,
   Td,
@@ -23,7 +22,7 @@ type MedicalRecord = {
   treatment: string;
 };
 
-function MedicalRecord() {
+function MedicalRecords() {
   const handleEdit = (id: string) => {
     console.log(`Edit record with ID: ${id}`);
   };
@@ -40,7 +39,6 @@ function MedicalRecord() {
       <Heading as={"h3"}>Medical Records</Heading>
       <TableContainer mt={10}>
         <Table>
-          <TableCaption>Medical Records</TableCaption>
           <Thead>
             <Tr>
               <Th>Patient ID</Th>
@@ -94,7 +92,7 @@ function MedicalRecord() {
   );
 }
 
-export default MedicalRecord;
+export default MedicalRecords;
 
 const medicalRecords: MedicalRecord[] = [
   {

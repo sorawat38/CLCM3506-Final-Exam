@@ -53,12 +53,12 @@ function Sidebar() {
         </ListItem>
         <ListItem>
           <NavLink
-            to={"/medical-record"}
+            to={"/medical-records"}
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}
           >
             <ListIcon as={InfoIcon} color={"teal.400"} />
-            Medical Record
+            Medical Records
           </NavLink>
         </ListItem>
       </List>
