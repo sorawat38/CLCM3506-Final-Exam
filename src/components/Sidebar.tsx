@@ -68,6 +68,7 @@ function Sidebar() {
           <Text>Benjamin Patel</Text>
           <Text
             as={ReactRouterLink}
+            to={"/profile"}
             fontSize={"sm"}
             fontWeight={"light"}
             onMouseOver={handleMouseOver}
