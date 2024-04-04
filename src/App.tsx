@@ -7,12 +7,14 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import RootLayout from "./layouts/RootLayout.tsx";
+import Profile from "./pages/Profile.tsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Dashboard />} />,
       <Route path="medical-record" element={<MedicalRecord />} />,
+      <Route path="profile" element={<Profile />} />,
     </Route>,
   ),
 );
