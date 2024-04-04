@@ -14,7 +14,7 @@ function RootLayout() {
       gridTemplateColumns={{ base: "1fr", md: "1fr 5fr" }}
     >
       <GridItem
-        bg={"teal.300"}
+        bg={"teal.400"}
         minHeight={{ md: "100vh" }}
         p={"50px"}
         area={"nav"}
