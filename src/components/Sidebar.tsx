@@ -1,6 +1,16 @@
-import { Avatar, Flex, List, ListIcon, ListItem, Text } from "@chakra-ui/react";
+import {
+  Avatar,
+  Box,
+  Flex,
+  HStack,
+  List,
+  ListIcon,
+  ListItem,
+  Text,
+} from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import { CalendarIcon, InfoIcon } from "@chakra-ui/icons";
+import { Link as ReactRouterLink } from "react-router-dom";
 
 function Sidebar() {
   const handleMouseOver = (e: {
@@ -46,7 +56,15 @@ function Sidebar() {
           </NavLink>
         </ListItem>
       </List>
-      <Avatar size={"md"} name={"B"} />
+      <HStack spacing={5}>
+        <Avatar size={"md"} name={"B"} />
+        <Box>
+          <Text>Benjamin Patel</Text>
+          <Text as={ReactRouterLink} fontSize={"sm"} fontWeight={"light"}>
+            Profile
+          </Text>
+        </Box>
+      </HStack>
     </Flex>
   );
 }
