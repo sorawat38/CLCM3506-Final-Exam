@@ -14,6 +14,9 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+import { CiFileOn } from "react-icons/ci";
+import { Icon } from "@chakra-ui/icons";
+import { Link as ReactRouterLink } from "react-router-dom";
 
 function UpcomingAppointments() {
   return (
@@ -107,21 +110,45 @@ function NextMeetings() {
 }
 
 function LabAndTestResult() {
+  const files = [
+    {
+      name: "Patient 1 Blood Lab Result",
+    },
+    {
+      name: "Patient 2 X-ray Result",
+    },
+    {
+      name: "Patient 3 Covid-19 Test Result",
+    },
+  ];
   return (
-    <Card>
-      <CardHeader>
-        <Heading size={"lg"} color={"teal.500"}>
-          Lab and Test Result
-        </Heading>
-      </CardHeader>
-      <CardBody></CardBody>
-    </Card>
+    <Box>
+      <Heading size={"lg"} color={"teal.500"}>
+        Lab and Test Result
+      </Heading>
+      <Stack spacing={5} m={"10px"}>
+        {files.map((file, index) => (
+          <Card key={index}>
+            <CardBody>
+              <HStack spacing={10} as={ReactRouterLink}>
+                <Icon as={CiFileOn} boxSize={16} />
+                <Box>
+                  <Text fontSize={"lg"} fontWeight={"bold"}>
+                    {file.name}
+                  </Text>
+                </Box>
+              </HStack>
+            </CardBody>
+          </Card>
+        ))}
+      </Stack>
+    </Box>
   );
 }
 
 function Dashboard() {
   return (
-    <Grid templateRows={"auto 1fr"} templateColumns={"repeat(2, 1fr)"} gap={5}>
+    <Grid templateRows={"auto 1fr"} templateColumns={"repeat(2, 1fr)"} gap={8}>
       <GridItem colSpan={2}>
         <UpcomingAppointments />
       </GridItem>
