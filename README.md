@@ -1,19 +1,36 @@
-# React + TypeScript + Vite
+# React Medical Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a medical dashboard built with React and TypeScript. It provides a user interface for managing appointments, viewing upcoming meetings, and accessing lab and test results.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Upcoming Appointments**: Displays the upcoming appointments with details like the patient's name and appointment time.
+- **Next Meetings**: Shows the next meetings with doctors along with their roles and profile pictures.
+- **Lab and Test Results**: Provides a list of lab and test results for different patients.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React
+- TypeScript
+- Vite
 
-- Configure the top-level `parserOptions` property like this:
+## Project Structure
 
-```js
+- `src/pages/Dashboard.tsx`: This is the main dashboard page. It contains components for upcoming appointments, next meetings, and lab and test results.
+- `src/pages/MedicalRecord.tsx`: This page is for displaying medical records.
+- `src/App.tsx`: This is the main entry point of the application. It sets up the routing for the application.
+
+## Getting Started
+
+1. Clone the repository.
+2. Install the dependencies using `npm install`.
+3. Start the development server using `npm run dev`.
+
+## ESLint Configuration
+
+This project uses ESLint for linting. The configuration can be expanded to enable type aware lint rules:
+
+```javascript
 export default {
   // other rules...
   parserOptions: {
