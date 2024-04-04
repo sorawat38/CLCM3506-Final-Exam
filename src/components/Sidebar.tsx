@@ -66,7 +66,13 @@ function Sidebar() {
         <Avatar size={"md"} name={"B"} />
         <Box>
           <Text>Benjamin Patel</Text>
-          <Text as={ReactRouterLink} fontSize={"sm"} fontWeight={"light"}>
+          <Text
+            as={ReactRouterLink}
+            fontSize={"sm"}
+            fontWeight={"light"}
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}
+          >
             Profile
           </Text>
         </Box>
