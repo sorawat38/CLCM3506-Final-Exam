@@ -7,6 +7,7 @@ This project is a medical dashboard built with React and TypeScript. It provides
 - **Upcoming Appointments**: Displays the upcoming appointments with details like the patient's name and appointment time.
 - **Next Meetings**: Shows the next meetings with doctors along with their roles and profile pictures.
 - **Lab and Test Results**: Provides a list of lab and test results for different patients.
+- **Medical Records**: A comprehensive view of patient medical records. It includes features to view, edit, and delete records.
 
 ## Tech Stack
 
