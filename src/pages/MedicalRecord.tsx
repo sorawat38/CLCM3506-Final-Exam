@@ -142,4 +142,13 @@ const medicalRecords: MedicalRecord[] = [
     medication: "Atorvastatin",
     treatment: "Lipid-lowering diet, exercise regimen",
   },
+  {
+    id: "006",
+    name: "Sophia Reynolds",
+    age: 35,
+    gender: "Female",
+    diagnosis: "Migraine",
+    medication: "Sumatriptan",
+    treatment: "Pain management, stress reduction techniques",
+  },
 ];
