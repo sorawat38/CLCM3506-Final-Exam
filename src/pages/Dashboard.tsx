@@ -90,7 +90,7 @@ function NextMeetings() {
         {meetings.map((meeting, index) => (
           <Card key={index}>
             <CardBody>
-              <HStack spacing={10}>
+              <HStack spacing={10} as={ReactRouterLink}>
                 <Avatar
                   size={"xl"}
                   name={meeting.name.replace("Dr. ", "")}
