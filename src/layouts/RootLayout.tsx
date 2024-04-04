@@ -21,7 +21,7 @@ function RootLayout() {
       >
         <Sidebar />
       </GridItem>
-      <GridItem px={"40px"} pt={"60px"} area={"header"}>
+      <GridItem px={"40px"} pt={"50px"} area={"header"}>
         <Header />
       </GridItem>
       <GridItem p={"40px"} area={"main"}>
