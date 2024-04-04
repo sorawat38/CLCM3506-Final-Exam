@@ -3,6 +3,7 @@ import {
   Box,
   Flex,
   HStack,
+  Img,
   List,
   ListIcon,
   ListItem,
@@ -31,9 +32,14 @@ function Sidebar() {
       justifyContent={"space-between"}
       height={"100%"}
     >
-      <List color={"white"} fontSize={"1.2em"} fontWeight={"bold"} spacing={10}>
+      <List
+        color={"teal.400"}
+        fontSize={"1.2em"}
+        fontWeight={"bold"}
+        spacing={10}
+      >
         <ListItem>
-          <Text fontSize={"2em"}>My Hospital</Text>
+          <Img src={"src/assets/logo.png"} alt={"Logo"} />
         </ListItem>
         <ListItem>
           <NavLink
@@ -41,7 +47,7 @@ function Sidebar() {
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}
           >
-            <ListIcon as={CalendarIcon} color={"white"} />
+            <ListIcon as={CalendarIcon} color={"teal.400"} />
             Dashboard
           </NavLink>
         </ListItem>
@@ -51,7 +57,7 @@ function Sidebar() {
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}
           >
-            <ListIcon as={InfoIcon} color={"white"} />
+            <ListIcon as={InfoIcon} color={"teal.400"} />
             Medical Record
           </NavLink>
         </ListItem>

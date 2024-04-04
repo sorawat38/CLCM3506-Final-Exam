@@ -14,14 +14,14 @@ function RootLayout() {
       gridTemplateColumns={{ base: "1fr", md: "1fr 5fr" }}
     >
       <GridItem
-        bg={"teal.400"}
+        bg={"gray.50"}
         minHeight={{ md: "100vh" }}
         p={"50px"}
         area={"nav"}
       >
         <Sidebar />
       </GridItem>
-      <GridItem p={"40px"} pt={"50px"} area={"header"}>
+      <GridItem px={"40px"} pt={"60px"} area={"header"}>
         <Header />
       </GridItem>
       <GridItem p={"40px"} area={"main"}>
