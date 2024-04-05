@@ -62,6 +62,9 @@ jobs:
           host: ${{ secrets.AWS_HOST_DNS }}
           username: ${{ secrets.AWS_EC2_USER }}
           key: ${{ secrets.AWS_EC2_SSH_KEY }}
+          envs: VERSION=$VERSION
           script: |
             docker pull stanthikun802/clcm3506-final-exam:$VERSION
+            docker stop clcm3506-final-exam && docker rm clcm3506-final-exam
             docker run -d -p 3000:3000 --name clcm3506-final-exam stanthikun802/clcm3506-final-exam:$VERSION
+            docker image prune -f
