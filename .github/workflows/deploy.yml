@@ -17,7 +17,6 @@ jobs:
         id: get_version
         run: |
           echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
-          echo "VERSION=${GITHUB_REF#refs/tags/}" >> "$GITHUB_OUTPUT"
 
       - name: Build the Docker image
         run: |
@@ -44,6 +43,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Extract version
+        id: get_version
+        run: |
+          echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
+
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@main
         with:
@@ -54,8 +58,6 @@ jobs:
 
       - name: Executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@master
-        env:
-          VERSION: ${{ needs.build_and_push_docker_image.get_version.outputs.VERSION }}
         with:
           host: ${{ secrets.AWS_HOST_DNS }}
           username: ${{ secrets.AWS_EC2_USER }}
