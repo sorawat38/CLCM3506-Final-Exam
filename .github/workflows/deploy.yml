@@ -55,7 +55,7 @@ jobs:
       - name: Executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@master
         env:
-          VERSION: ${{ steps.get_version.outputs.VERSION }}
+          VERSION: ${{ needs.build_and_push_docker_image.get_version.outputs.VERSION }}
         with:
           host: ${{ secrets.AWS_HOST_DNS }}
           username: ${{ secrets.AWS_EC2_USER }}
