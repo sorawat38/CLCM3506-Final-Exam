@@ -59,7 +59,7 @@ jobs:
       - name: Executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@master
         env:
-          VERSION: ${{ github.sha }}
+          VERSION: ${{ env.VERSION }}
         with:
           host: ${{ secrets.AWS_HOST_DNS }}
           username: ${{ secrets.AWS_EC2_USER }}
