@@ -59,14 +59,14 @@ jobs:
       - name: Executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@master
         env:
-          VERSION: $VERSION
+          VERSION: ${GITHUB_REF#refs/tags/}
         with:
           host: ${{ secrets.AWS_HOST_DNS }}
           username: ${{ secrets.AWS_EC2_USER }}
           key: ${{ secrets.AWS_EC2_SSH_KEY }}
           envs: VERSION
           script: |
-            docker pull stanthikun802/clcm3506-final-exam:${GITHUB_REF#refs/tags/}
+            docker pull stanthikun802/clcm3506-final-exam:
             docker stop clcm3506-final-exam && docker rm clcm3506-final-exam
             docker run -d -p 3000:3000 --name clcm3506-final-exam stanthikun802/clcm3506-final-exam:${GITHUB_REF#refs/tags/}
             docker image prune -f
