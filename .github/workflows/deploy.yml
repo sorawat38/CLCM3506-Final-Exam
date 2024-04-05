@@ -58,11 +58,13 @@ jobs:
 
       - name: Executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@master
+        env:
+          VERSION: $VERSION
         with:
           host: ${{ secrets.AWS_HOST_DNS }}
           username: ${{ secrets.AWS_EC2_USER }}
           key: ${{ secrets.AWS_EC2_SSH_KEY }}
-          envs: VERSION=$VERSION
+          envs: VERSION
           script: |
             docker pull stanthikun802/clcm3506-final-exam:$VERSION
             docker stop clcm3506-final-exam && docker rm clcm3506-final-exam
