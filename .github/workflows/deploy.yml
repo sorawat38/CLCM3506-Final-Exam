@@ -62,7 +62,7 @@ jobs:
           key: ${{ secrets.AWS_EC2_SSH_KEY }}
           script: |
             echo $VERSION
-            docker pull stanthikun802/clcm3506-final-exam:${{ env.VERSION }}
+            docker pull stanthikun802/clcm3506-final-exam:$VERSION
             docker stop clcm3506-final-exam && docker rm clcm3506-final-exam
-            docker run -d -p 3000:3000 --name clcm3506-final-exam stanthikun802/clcm3506-final-exam:${{ env.VERSION }}
+            docker run -d -p 3000:3000 --name clcm3506-final-exam stanthikun802/clcm3506-final-exam:$VERSION
             docker image prune -f
