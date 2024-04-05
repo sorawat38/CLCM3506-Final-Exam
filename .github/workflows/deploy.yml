@@ -15,7 +15,9 @@ jobs:
 
       - name: Extract version
         id: get_version
-        run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
+        run: |
+          echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
+          echo "VERSION=${GITHUB_REF#refs/tags/}" >> "$GITHUB_OUTPUT"
 
       - name: Build the Docker image
         run: |
@@ -56,8 +58,10 @@ jobs:
           host: ${{ secrets.AWS_HOST_DNS }}
           username: ${{ secrets.AWS_EC2_USER }}
           key: ${{ secrets.AWS_EC2_SSH_KEY }}
+          env:
+            VERSION: ${{ steps.get_version.outputs.VERSION }}
           script: |
-            echo ${{ env.VERSION }}
+            echo $VERSION
             docker pull stanthikun802/clcm3506-final-exam:${{ env.VERSION }}
             docker stop clcm3506-final-exam && docker rm clcm3506-final-exam
             docker run -d -p 3000:3000 --name clcm3506-final-exam stanthikun802/clcm3506-final-exam:${{ env.VERSION }}
